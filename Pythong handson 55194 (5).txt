@@ -1,0 +1,154 @@
+Magic constant
+
+def generator_Magic(n1):
+    lst = []
+    for i in range(3,n1+1):
+        M = i*(i*i + 1)/2
+        lst.append(M)
+   
+    for i in range(len(lst)):
+        yield lst[i] 
+
+Prime number generator
+   lst = []
+    lst1 = []
+    lst2 = []
+    odd=1
+    even=0
+    for i in range(2, num+1):
+        if i>1:
+            for j in range(2,i):
+                if (i % j)== 0:
+                    break;
+            else:
+                lst.append(i)
+                    
+    for i in range(len(lst)):
+        if(i % 2 == 0):
+            lst1.append(lst[i])
+            even += 2
+        else:
+            lst2.append(lst[i])
+            odd +=2
+            
+    if(val):
+        for i in range(len(lst1)):
+            yield lst1[i] 
+    else:
+        for i in range(len(lst2)):
+            yield lst2[i]
+
+
+Classes & objects 1
+Task 1
+
+class Movie:
+    def __init__(self,name,n,cost):
+        self.name = name
+        self.n = n
+        self.cost = cost
+    def __str__(self):
+        return"Movie : {self.name}\nNumber of Tickets : {self.n}\nTotal Cost : {self.cost}".format(self=self)
+
+Task 2
+class comp:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+        
+    def add(self,other):
+        print("Sum of the two Complex numbers :{}+{}i".format(self.a + other.a, self.b + other.b))
+    def sub(self,other):
+        if (self.b>=other.b):
+             print("Subtraction of the two Complex numbers :{}+{}i".format(self.a - other.a, self.b - other.b))
+        else:
+             print("Substraction of the two Complex numbers :{}{}i".format(self.a - other.a, self.b - other.b))
+
+
+
+module 3 cryptography
+
+from cryptography.fernet import Fernet
+def encrdecr(keyval, textencr, textdecr):
+    mainlist = []
+    f = Fernet(keyval)
+    mainlist.append(f.encrypt(textencr))
+    d = f.decrypt(textdecr)
+    mainlist.append(d.decode())
+    
+    return mainlist
+
+Handling exceptions 1
+
+def Handle_Exc1():
+    a = int(input())
+    b = int(input())
+    
+    if(a>150 or b<100):
+        print("Input integers value out of range.");
+    elif(a + b) > 400:
+        print("Their sum is out of range")    
+    else:
+        print("All in range")
+
+
+Handling exceptions 2
+
+def FORLoop():
+    n = int(input())
+    l1 = []
+    for i in range(n):
+        l1.append(int(input()))
+
+    print(l1)
+    iter1 = iter(l1)
+    
+    for i in range(len(l1)):
+        print(next(iter1))
+        
+    return iter1
+
+
+
+Handling exceptions 3
+
+def Bank_ATM(balance,choice,amount):
+    flag = 0
+    if balance < 500:
+        print("As per the Minimum Balance Policy, Balance must be atleast 500")
+    else:
+        if(choice ==1):
+            if amount < 2000: 
+                print("The Minimum amount of Deposit should be 2000.")
+            else:
+                flag = 1
+                balance += amount
+            if(choice == 2):
+                if(balance - amount)<500:
+                    print("You cannot withdraw this amount due to Minimum Balance Policy")
+                else:
+                    flag = 1
+                    balance -= amount
+        if(flag):
+            print("Updated Balance Amount:  {}".format(balance))
+
+Handling exceptions 4
+
+def Library(memberfee,installment,book):
+    if(installment > 3):
+        print("Maximum Permitted Number of Installments is 3")
+        
+    else:
+        if (installment == 0):
+            print("Number of Installments cannot be Zero.")
+        else:
+            print("Amount per Installment is  {}".format(memberfee/installment))
+            
+            ListOfBooks = ["philosphers stone", "chamber of secrets", "prisoner of azkaban", "goblet of fire", "order of phoenix", "half blood price", "deathly hallows 1", "deathly hallows 2"]
+         
+            book =  book.lower()
+            if book in ListOfBooks:
+                print("It is available in this section")
+            else:
+                print("No such book exists in this section")
+                
