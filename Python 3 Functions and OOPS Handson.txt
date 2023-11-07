@@ -1,0 +1,137 @@
+----Prime Number generator---
+
+
+    lst = []
+    lst1 = []
+    lst2 = []
+    odd=1
+    even=0
+    for i in range(2, num+1):
+        if i>1:
+            for j in range(2,i):
+                if (i % j) == 0:
+                    break;
+            else:
+                lst.append(i)
+    for i in range(len(lst)):
+        if (i % 2 == 0):
+            lst1.append(lst[i])
+            even += 2
+        else:
+            lst2.append (lst[i])
+            odd +=2
+    if(val):
+        for i in range(len(lst1)):
+            yield lst1[i]
+    else:
+        for i in range(len (lst2)):
+            yield lst2([i]
+
+
+
+
+----1. Class and Objects 1 task-1-----
+
+
+# Write your code here
+class Movie:
+    def __init__(self,name,n,cost):
+        self.name = name
+        self.n = n
+        self.cost = cost
+    def __str__(self):
+        return"Movie : {self.name}\nNumber of Tickets : {self.n}\nTotal Cost : {self.cost}".format(self=self)
+
+
+
+if __name__ == '__main__':
+    name = input()
+    n = int(input().strip())
+    cost = int(input().strip())
+    
+    p1 = Movie(name,n,cost)
+    print(p1)
+
+
+
+
+----Classes and Object 1 task 2----
+
+
+
+#Write your code here
+class comp:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def add(self, other):
+        print("Sum of the two Complex numbers :{}+{}i".format(self.a + other.a, self.b + other.b))
+    def sub(self,other):
+        if(self.b>=other.b):
+            print("Subtraction of the two Complex numbers :{}+{}i".format(self.a - other.a, self.b - other.b))
+        else:
+            print("Subtraction of the two Complex numbers :{}{}i".format(self.a - other.a, self.b - other.b))
+
+
+
+
+
+
+----Class and Objects 2 Task-1 -----
+
+
+#Write your code here
+class parent:
+    def __init__ (self,t):
+        self.t=t
+    def display(self):
+        print("Share of Parents is {} Million.".format(round((self.t)/2,2)))
+        
+class son(parent):
+    
+    def __init__(self, t, sp):
+        self.sp = sp
+        parent.__init__(self,t)
+        
+    def son_display(self):
+        Percentage_for_son = (self.t*self.sp)/100
+        print("Share of Son is {} Million.".format(round(Percentage_for_son,2)))
+        print("Total Asset Worth is {} Million.".format(round(self.t,2)))
+        
+class daughter(parent):
+    def __init__(self, t, dp):
+        self.dp = dp
+        parent.__init__(self,t)
+        
+    def daughter_display(self):
+        Percentage_for_daughter = (self.t*self.dp)/100
+        print("Share of Daughter is {} Million.".format(round(Percentage_for_daughter,2)))
+        print("Total Asset worth is {} Million.".format(round(self.t,2)))
+
+
+
+
+
+----Class and Objects 2 Task-2 -----
+
+
+# Write your code here
+class rectangle:
+    
+    def display(self):
+        print("This is a Rectangle")
+        
+    def area(self, a, b):
+        self.a = a
+        self.b = b
+        print("Area of Rectangle is  {}".format(self.a * self.b))
+    
+    
+class square:
+        
+    def display(self):
+        print("This is a Square")
+        
+    def area(self,a):
+        self.a = a
+        print("Area of square is  {}".format (self.a * self.a))
